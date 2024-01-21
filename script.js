@@ -34,34 +34,46 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
+
+
 function game() {
     let playerScore = 0;
     let computerScore = 0;
+    let i=0;
+    const btn_container=document.querySelector('#btn-container')
+    const results_div=document.querySelector('#results')
+    
+    btn_container.addEventListener('click',function(e){
+        if (e.target.classList.contains("btn")) {
+            i++;
+            const computerSelection = getComputerChoice();
+            let result = playRound(e.target.value, computerSelection)
+            if (result.includes('Win')) {
+                playerScore++;
+            } else if (result.includes('Lose')) {
+                computerScore++;
+            }
+            results_div.insertAdjacentHTML('beforeend', `<br>Round ${i}: ${result}`);
 
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = 'Rock'; 
-        const computerSelection = getComputerChoice();
-        const result = playRound(playerSelection, computerSelection);
-
-        console.log(`Round ${i + 1}: ${result}`);
-
-        if (result.includes('Win')) {
-            playerScore++;
-        } else if (result.includes('Lose')) {
-            computerScore++;
+            if(playerScore==5||computerScore==5){
+                results_div.insertAdjacentHTML('beforeend', `<br>Final Score - Player: ${playerScore}, Computer: ${computerScore}`);
+                if (playerScore > computerScore) {
+                    results_div.insertAdjacentHTML('beforeend', `<br>You win the game!`);
+                } else if (playerScore < computerScore) {
+                    results_div.insertAdjacentHTML('beforeend', `<br>You lose the game!`);
+                } else {
+                    results_div.insertAdjacentHTML('beforeend', `<br>It\'s a tie!!`);   
+                }
+                playerScore = 0;
+                computerScore = 0;
+                i=0;
+                
+            }
+            
         }
-    }
-
-    console.log(`Final Score - Player: ${playerScore}, Computer: ${computerScore}`);
-
-    if (playerScore > computerScore) {
-        console.log('You win the game!');
-    } else if (playerScore < computerScore) {
-        console.log('You lose the game.');
-    } else {
-        console.log('It\'s a tie!');
-    }
+    })
 }
 
-// Example usage:
 game();
+
