@@ -43,7 +43,7 @@ function game() {
     let i=0;
     const btn_container=document.querySelector('#btn-container')
     const results_div=document.querySelector('#results')
-    
+    const buttons = document.querySelectorAll(".btn");
     btn_container.addEventListener('click',function(e){
         if (e.target.classList.contains("btn")) {
             i++;
@@ -65,9 +65,7 @@ function game() {
                 } else {
                     results_div.insertAdjacentHTML('beforeend', `<br>It\'s a tie!!`);   
                 }
-                playerScore = 0;
-                computerScore = 0;
-                i=0;
+                buttons.forEach((btn) => btn.setAttribute("disabled", ""));
                 
             }
             
