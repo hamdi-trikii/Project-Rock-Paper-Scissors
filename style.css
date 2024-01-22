@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #792137;
+  height: 20vh;
+  display: flex;
+  padding: 6vh 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+header h1, header h2 {
+  font-family: "Rubik Burned", system-ui;
+  color: #217963;
+  line-height: 8vh;
+}
+
+main {
+  background-color: #793721;
+  height: 66vh;
+  padding: 4vh 0;
+}
+main #score {
+  background-color: #796321;
+  font-size: 36px;
+  font-weight: 900;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 20px;
+  margin: 0 auto;
+  border: 3px dotted #217963;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5wpx #217963;
+}
+main #btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+  gap: 10vw;
+}
+main #btn-container .btn {
+  background-color: transparent;
+  border: none;
+}
+main #btn-container img {
+  width: 24vh;
+  height: 24vh;
+}
+main #btn-container img:hover {
+  transform: scale(1.1);
+}
+main .choice {
+  font-family: "Lemon", serif;
+  text-align: center;
+  font-size: 16px;
+}
+main .choice #c-choice {
+  color: #217937;
+}
+main .choice #p-choice {
+  color: #372179;
+}
+main #results {
+  font-family: "Lemon", serif;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+main #results .reset {
+  margin-top: 1vh;
+  background-color: #216379;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 4px;
+  font-family: "Lemon", serif;
+  color: black;
+}
+main #results .reset:hover {
+  box-shadow: 0px 0px 10px #632179;
+}
+
+footer {
+  font-size: 22px;
+  float: bottom;
+  background-color: #792137;
+  height: 14vh;
+  font-family: "Rubik Burned", system-ui;
+  color: #217963;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

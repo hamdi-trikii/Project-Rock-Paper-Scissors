@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-
 
 </head>
 <body>
-    <div id="btn-container">
-        <button id="Rock" value="rock" class="btn">Rock!</button>
-        <button id="Paper"  value="paper" class="btn">Paper!</button>
-        <button id="Scissor" value="scissors" class="btn">Scissor!</button>
-    </div>
+    <header>
+        <h1>Welcome To Rock Paper Scissor Game</h1>
+        <h2>This Game Is A Part Of My Odin Project's Assignment</h2>
+    </header>
 
-    <div id="results"></div>
-    
+
+    <main>
+        <div id="score">0/0</div>
+        <div id="btn-container">
+            <button class="btn" ><img src="rock.png" id="Rock"  class="btn" alt=""></button>
+            <button class="btn" ><img src="paper.png" id="Paper"   class="btn"alt=""></button>
+            <button class="btn" ><img src="scissor.png" id="Scissors"  class="btn" alt=""></button>
+
+<!--             <button id="Rock" value="rock" class="btn">Rock!</button>
+            <button id="Paper"  value="paper" class="btn">Paper!</button>
+            <button id="Scissor" value="scissors" class="btn">Scissor!</button> -->
+        </div>
+        <div class="choice">
+            <div id="c-choice"></div>
+            <div id="p-choice"></div>
+        </div>
+        <div id="results">
+            Press any button to start the game
+        </div>
+    </main>
+
+
+    <footer>Copyright &copy; 2024 | All Rights Reserved | Creator:Triki Hamdi</footer>
 </body>
 </html>
